@@ -5,3 +5,4 @@ print("You can run this code to see the output.")
 print("Feel free to modify the code and experiment with it.")
 print("Happy coding!")
 import math
+print("The square root of 16 is:", math.sqrt(16))clear
