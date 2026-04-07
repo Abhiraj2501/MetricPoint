@@ -65,7 +65,7 @@ print(housing_prepared.shape)
 # Linear Regression
 lin_reg = LinearRegression()
 lin_reg.fit(housing_prepared, housing_labels)
-lin_rmse = mean_squared_error
+lin_rmse = mean_squared_error(housing_labels, li)
 
 
 
