@@ -65,3 +65,8 @@ print(housing_prepared.shape)
 # Linear Regression
 lin_reg = LinearRegression()
 lin_reg.fit(housing_prepared, housing_labels)
+
+# Decision Tree
+tree_reg = DecisionTreeRegressor(random_state=42)
+tree_reg.fit(housing_prepared, housing_labels)
+ 
