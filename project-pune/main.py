@@ -90,6 +90,8 @@ random_forest_reg.fit(housing_prepared, housing_labels)
 random_forest_preds = random_forest_reg.predict(housing_prepared)
 random_forest_rmse = root_mean_squared_error(housing_labels, random_forest_preds)
 # print(f"The root mean squared error for Random Forest is {random_forest_rmse}")
-random_forest_rmses = -cross_val_score(random_forest_reg, housing_prepared, housing_labels, scoring="neg_root_mean_squared_error", cv=10)
+random_forest_rmses = -cross_val_score(random_forest_reg, housing_prepared, housing_labels, scoring="neg_root_mean_squared_error", cv=10
+                                       
+                                       )
 # print(f"The root mean squared error for Decision Tree is {dec_rmses}")
 print(pd.Series(random_forest_rmses).describe())
