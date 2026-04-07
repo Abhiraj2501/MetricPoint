@@ -61,7 +61,6 @@ if not os.path.exists(MODEL_FILE):
     split = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
     for train_index, test_index in split.split(housing, housing['income_cat']):
         housing.loc[test_index] = housing.loc[test_index].drop("income_cat", axis=1).to_csv("input.csv", index=False)
-        df = housing.loc[train_index].drop("income_cat", axis=1)
         housing.loc[test_index] = housing.loc[test_index].drop("income_cat", axis=1).to_csv("input.csv", index=False)
 
 
