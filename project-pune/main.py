@@ -74,6 +74,9 @@ dec_tree_rmse = root_mean_squared_error(housing_labels, dec_tree_preds)
 #print(f"Decision Tree RMSE: {dec_tree_rmse}")
 dec_tree_rmse = -cross_val_score(dec_tree_reg, housing_prepared, housing_labels, scoring="neg_root_mean_squared_error", cv=10)
 print(pd.Series(dec_tree_rmse).describe())
+
+
+
 # Random Forest
 forest_reg = RandomForestRegressor(n_estimators=100, random_state=42)
 forest_reg.fit(housing_prepared, housing_labels)
