@@ -97,3 +97,4 @@ forest_rmse = root_mean_squared_error(housing_labels, forest_preds)
 print("Decision Tree RMSE:", tree_rmse)
 print("Random Forest RMSE:", forest_rmse)'''
 
+# Cross-validation for Random Forest
