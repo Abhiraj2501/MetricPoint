@@ -88,3 +88,7 @@ lin_preds = lin_reg.predict(housing_prepared)
 tree_preds = tree_reg.predict(housing_prepared)
 forest_preds = forest_reg.predict(housing_prepared)
  
+# Calculate RMSE
+lin_rmse = mean_squared_error(housing_labels, lin_preds, squared=False)
+tree_rmse = mean_squared_error(housing_labels, tree_preds, squared=False)
+forest_rmse = mean_squared_error(housing_labels, forest_preds, squared=False)
