@@ -72,7 +72,7 @@ dec_tree_reg.fit(housing_prepared, housing_labels)
 dec_tree_preds = dec_tree_reg.predict(housing_prepared)
 dec_tree_rmse = root_mean_squared_error(housing_labels, dec_tree_preds)
 #print(f"Decision Tree RMSE: {dec_tree_rmse}")
-tree_rmse
+tree_rmse = -
 
 # Random Forest
 forest_reg = RandomForestRegressor(n_estimators=100, random_state=42)
