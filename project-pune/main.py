@@ -38,19 +38,15 @@ num_attribs = housing.drop("ocean_proximity", axis=1).columns.tolist()
 cat_attribs = ["ocean_proximity"]
 
 # 5. Pipelines
-# Numerical pipeline
 num_pipeline = Pipeline([
     ("imputer", SimpleImputer(strategy="median")),
     ("scaler", StandardScaler()),
 ])
 
-# Categorical pipeline
 cat_pipeline = Pipeline([
-    # ("ordinal", OrdinalEncoder())  # Use this if you prefer ordinal encoding
     ("onehot", OneHotEncoder(handle_unknown="ignore"))
 ])
 
-# Full pipeline
 full_pipeline = ColumnTransformer([
     ("num", num_pipeline, num_attribs),
     ("cat", cat_pipeline, cat_attribs),
@@ -58,26 +54,33 @@ full_pipeline = ColumnTransformer([
 
 # 6. Transform the data
 housing_prepared = full_pipeline.fit_transform(housing)
-
-# housing_prepared is now a NumPy array ready for training
 print(housing_prepared.shape)
+
+# -------------------- MODELS --------------------
 
 # Linear Regression
 lin_reg = LinearRegression()
 lin_reg.fit(housing_prepared, housing_labels)
 lin_preds = lin_reg.predict(housing_prepared)
-lin_rmse = root_mean_squared_error(housing_labels, lin_preds, squared=False)
+
+# ✅ FIXED LINE (no squared argument)
+lin_rmse = root_mean_squared_error(housing_labels, lin_preds)
 print(f"Linear Regression RMSE: {lin_rmse}")
-
-
-
-
 
 
 # Decision Tree
 tree_reg = DecisionTreeRegressor(random_state=42)
 tree_reg.fit(housing_prepared, housing_labels)
 
+tree_preds = tree_reg.predict(housing_prepared)
+tree_rmse = root_mean_squared_error(housing_labels, tree_preds)
+print(f"Decision Tree RMSE: {tree_rmse}")
+
+
 # Random Forest
 forest_reg = RandomForestRegressor(n_estimators=100, random_state=42)
 forest_reg.fit(housing_prepared, housing_labels)
+
+forest_preds = forest_reg.predict(housing_prepared)
+forest_rmse = root_mean_squared_error(housing_labels, forest_preds)
+print(f"Random Forest RMSE: {forest_rmse}")
