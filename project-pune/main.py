@@ -13,18 +13,28 @@ from sklearn.ensemble import RandomForestRegressor
 # File names for saving trained model and preprocessing pipeline
 MODEL_FILE = "model.pkl"
 PIPELINE_FILE = "pipeline.pkl"
-
 def build_pipeline(num_attribs, cat_attribs):
+    """
+    Builds a preprocessing pipeline:
+    - Numerical: missing values → median, then scaling
+    - Categorical: one-hot encoding
+    """
+
+    # Numerical pipeline: handle missing values + normalize scale
     num_pipeline = Pipeline([
-        ("imputer", SimpleImputer(strategy="median")),
-        ("scaler", StandardScaler())
+        ("imputer", SimpleImputer(strategy="median")),   # Fill missing values with median
+        ("scaler", StandardScaler())                     # Standardize features
     ])
+
+    # Categorical pipeline: convert text → one-hot vectors
     cat_pipeline = Pipeline([
-        ("onehot", OneHotEncoder(handle_unknown="ignore"))
+        ("onehot", OneHotEncoder(handle_unknown="ignore"))  # Ignore unseen categories at test time
     ])
+
+    # Combine both pipelines
     full_pipeline = ColumnTransformer([
-        ("num", num_pipeline, num_attribs),
-        ("cat", cat_pipeline, cat_attribs)
+        ("num", num_pipeline, num_attribs),   # Apply num pipeline to numerical columns
+        ("cat", cat_pipeline, cat_attribs)    # Apply cat pipeline to categorical columns
     ])
+
     return full_pipeline
- 
