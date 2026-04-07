@@ -1,29 +1,36 @@
-MetricPoint
+# MetricPoint
 
-A data-driven real estate price analysis and prediction system built on Gurgaon's housing market. The goal: give homebuyers and investors a clearer picture of property valuation through structured ML pipelines, not gut instinct.
+A data-driven real estate price analysis and prediction system built on Gurgaon's housing market.  
+The goal: give homebuyers and investors a clearer picture of property valuation through structured ML pipelines, not gut instinct.
 
-What This Project Does
+---
 
+## What This Project Does
 
-California's real estate market moves fast and is notoriously opaque. This project processes raw housing data, cleans it, runs exploratory analysis, and builds a prediction pipeline using scikit-learn to estimate property prices based on key features.
-There's also a parallel project-pune module applying the same approach to Pune's housing market.
+California's real estate market moves fast and is notoriously opaque.  
+This project processes raw housing data, cleans it, runs exploratory analysis, and builds a prediction pipeline using scikit-learn to estimate property prices based on key features.
 
-Project Structure
+There's also a parallel `project-pune` module applying the same approach to Pune's housing market.
+
+---
+
+## Project Structure
+
+```bash
 MetricPoint/
 │
-├── housing.csv                        # Raw California housing dataset
-├── cleaned_data.csv                   # Preprocessed dataset after cleaning
+├── housing.csv                     # Raw California housing dataset
+├── cleaned_data.csv                # Preprocessed dataset after cleaning
 │
-├── Analyzingthedata.ipynb             # EDA — distributions, correlations, outliers
-├── Visualizingthedata.ipynb           # Visual exploration — heatmaps, scatter plots, geo plots
-├── Creating-a-Test-Set.ipynb          # Stratified sampling to create train/test splits
-├── HandlingCategoricalAttributes.ipynb # Encoding strategies for categorical features
-├── FeatureScaling.ipynb               # Normalization and standardization
-├── sklearn-pipelines.ipynb            # End-to-end sklearn Pipeline construction
+├── Analyzingthedata.ipynb          # EDA — distributions, correlations, outliers
+├── Visualizingthedata.ipynb        # Visual exploration — heatmaps, scatter plots, geo plots
+├── Creating-a-Test-Set.ipynb       # Stratified sampling for train/test split
+├── HandlingCategoricalAttributes.ipynb  # Encoding strategies
+├── FeatureScaling.ipynb            # Normalization and standardization
+├── sklearn-pipelines.ipynb         # End-to-end pipeline construction
 │
-├── main.py                            # Entry point
-└── project-pune/                      # Same pipeline applied to Pune housing data
-
+├── main.py                         # Entry point
+└── project-pune/                   # Same pipeline for Pune dataset
 ML Pipeline Overview
 The notebooks follow a deliberate, sequential workflow:
 
