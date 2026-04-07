@@ -1,8 +1,8 @@
-import os
-import pandas as pd
-import numpy as np
-import joblib
- 
+import os                      # For checking if model file exists
+import pandas as pd           # Data handling
+import numpy as np            # Numerical operations
+import joblib                 # Save/load model and pipeline
+
 from sklearn.model_selection import StratifiedShuffleSplit
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
@@ -10,6 +10,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.ensemble import RandomForestRegressor
 
+# File names for saving trained model and preprocessing pipeline
 MODEL_FILE = "model.pkl"
 PIPELINE_FILE = "pipeline.pkl"
 
