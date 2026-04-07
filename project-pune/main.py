@@ -62,3 +62,6 @@ housing_prepared = full_pipeline.fit_transform(housing)
 # housing_prepared is now a NumPy array ready for training
 print(housing_prepared.shape)
 
+# Linear Regression
+lin_reg = LinearRegression()
+lin_reg.fit(housing_prepared, housing_labels)
