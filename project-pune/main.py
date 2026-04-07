@@ -5,7 +5,11 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
-# from sklearn.preprocessing import OrdinalEncoder  # Uncomment if you prefer ordinal
+from sklearn.linear_model import LinearRegression
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error
+
 
 # 1. Load the data
 housing = pd.read_csv("housing.csv")
@@ -57,3 +61,4 @@ housing_prepared = full_pipeline.fit_transform(housing)
 
 # housing_prepared is now a NumPy array ready for training
 print(housing_prepared.shape)
+
