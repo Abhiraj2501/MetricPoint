@@ -38,6 +38,8 @@ def build_pipeline(num_attribs, cat_attribs):
     ])
 
     return full_pipeline
+
+
 # -------------------- TRAIN OR LOAD --------------------
 
 # If model doesn't exist → train
