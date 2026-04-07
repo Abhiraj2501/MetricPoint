@@ -72,7 +72,7 @@ tree_reg.fit(housing_prepared, housing_labels)
 
 tree_preds = tree_reg.predict(housing_prepared)
 tree_rmse = root_mean_squared_error(housing_labels, tree_preds)
-print(f"Decision Tree RMSE: {tree_rmse}")
+#print(f"Decision Tree RMSE: {tree_rmse}")
 
 
 # Random Forest
