@@ -1,7 +1,10 @@
 MetricPoint
+
 A data-driven real estate price analysis and prediction system built on Gurgaon's housing market. The goal: give homebuyers and investors a clearer picture of property valuation through structured ML pipelines, not gut instinct.
 
 What This Project Does
+
+
 California's real estate market moves fast and is notoriously opaque. This project processes raw housing data, cleans it, runs exploratory analysis, and builds a prediction pipeline using scikit-learn to estimate property prices based on key features.
 There's also a parallel project-pune module applying the same approach to Pune's housing market.
 
