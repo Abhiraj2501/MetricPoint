@@ -61,6 +61,7 @@ if not os.path.exists(MODEL_FILE):
     split = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
     for train_index, _ in split.split(housing, housing['income_cat']):
         housing = housing.loc[train_index].drop("income_cat", axis=1)
+        housing.loc = housing.loc[train_index].drop("income_cat", axis=1)
 
 
     # Separate labels (target variable)
