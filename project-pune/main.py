@@ -65,7 +65,7 @@ print(housing_prepared.shape)
 # Linear Regression
 lin_reg = LinearRegression()
 lin_reg.fit(housing_prepared, housing_labels)
-lin_rmse = np.sqrt(mean_squared_error(housing_labels, lin_reg.predict(housing_prepared)))
+lin_rmse = 
 
 
 
@@ -76,7 +76,7 @@ lin_rmse = np.sqrt(mean_squared_error(housing_labels, lin_reg.predict(housing_pr
 # Decision Tree
 tree_reg = DecisionTreeRegressor(random_state=42)
 tree_reg.fit(housing_prepared, housing_labels)
-            
+
 # Random Forest
 forest_reg = RandomForestRegressor(n_estimators=100, random_state=42)
 forest_reg.fit(housing_prepared, housing_labels)
