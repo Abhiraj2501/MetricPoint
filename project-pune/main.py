@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.linear_model import LinearRegression
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_squared_error, root_mean_squared_error
+from sklearn.metrics import root_mean_squared_error
 
 
 # 1. Load the data
@@ -67,7 +67,7 @@ lin_reg = LinearRegression()
 lin_reg.fit(housing_prepared, housing_labels)
 lin_preds = lin_reg.predict(housing_prepared)
 lin_rmse = root_mean_squared_error(housing_labels, lin_preds, squared=False)
-print
+print(f"Linear Regression RMSE: {lin_rmse}")
 
 
 
