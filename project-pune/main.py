@@ -96,7 +96,7 @@ dec_tree_rmse = root_mean_squared_error(housing_labels, dec_tree_preds)
 forest_rmse = root_mean_squared_error(housing_labels, forest_preds)
 
 '''print("Linear Regression RMSE:", lin_rmse)
-print("Decision Tree RMSE:", tree_rmse)
+print("Decision Tree RMSE:", dec_tree_rmse)
 print("Random Forest RMSE:", forest_rmse)'''
 
 # Cross-validation for Random Forest
