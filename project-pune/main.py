@@ -62,6 +62,7 @@ if not os.path.exists(MODEL_FILE):
     for train_index, _ in split.split(housing, housing['income_cat']):
         housing = housing.loc[train_index].drop("income_cat", axis=1)
 
+
     # Separate labels (target variable)
     housing_labels = housing["median_house_value"].copy()
 
