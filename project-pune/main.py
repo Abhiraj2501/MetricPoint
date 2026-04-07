@@ -67,7 +67,7 @@ lin_reg = LinearRegression()
 lin_reg.fit(housing_prepared, housing_labels)
 lin_preds = lin_reg.predict(housing_prepared)
 lin_rmse = root_mean_squared_error(housing_labels, lin_preds, squared=False)
-
+print
 
 
 
