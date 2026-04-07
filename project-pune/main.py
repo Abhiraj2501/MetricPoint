@@ -69,4 +69,7 @@ lin_reg.fit(housing_prepared, housing_labels)
 # Decision Tree
 tree_reg = DecisionTreeRegressor(random_state=42)
 tree_reg.fit(housing_prepared, housing_labels)
- 
+
+# Random Forest
+forest_reg = RandomForestRegressor(n_estimators=100, random_state=42)
+forest_reg.fit(housing_prepared, housing_labels)
