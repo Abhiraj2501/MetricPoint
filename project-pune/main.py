@@ -81,7 +81,7 @@ forest_reg.fit(housing_prepared, housing_labels)
 
 forest_preds = forest_reg.predict(housing_prepared)
 forest_rmse = root_mean_squared_error(housing_labels, forest_preds)
-print(f"Random Forest RMSE: {forest_rmse}")
+#print(f"Random Forest RMSE: {forest_rmse}")
 
 # Predict using training data
 lin_preds = lin_reg.predict(housing_prepared)
