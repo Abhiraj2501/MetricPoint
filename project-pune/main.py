@@ -87,7 +87,7 @@ forest_rmse = root_mean_squared_error(housing_labels, forest_preds)
 
 # Predict using training data
 lin_preds = lin_reg.predict(housing_prepared)
-tree_preds = dectree_reg.predict(housing_prepared)
+dec_tree_preds = dec_tree_reg.predict(housing_prepared)
 forest_preds = forest_reg.predict(housing_prepared)
  
 # Calculate RMSE
