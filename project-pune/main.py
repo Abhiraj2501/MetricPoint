@@ -69,7 +69,7 @@ print(f"Linear Regression RMSE: {lin_rmse}")
 # Decision Tree
 dec_tree_reg = DecisionTreeRegressor(random_state=42)
 dec_tree_reg.fit(housing_prepared, housing_labels)
-dec_
+dec_tree_preds = dec_tree_reg.predict(housing_prepared)
 dec_tree_preds = dec_tree_reg.predict(housing_prepared)
 dec_tree_rmse = root_mean_squared_error(housing_labels, dec_tree_preds)
 #print(f"Decision Tree RMSE: {dec_tree_rmse}")
