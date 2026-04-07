@@ -66,6 +66,13 @@ print(housing_prepared.shape)
 lin_reg = LinearRegression()
 lin_reg.fit(housing_prepared, housing_labels)
 lin_rmse = np.sqrt(mean_squared_error(housing_labels, lin_reg.predict(housing_prepared)))
+
+
+
+
+
+
+
 # Decision Tree
 tree_reg = DecisionTreeRegressor(random_state=42)
 tree_reg.fit(housing_prepared, housing_labels)
